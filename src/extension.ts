@@ -19,6 +19,7 @@ export function getWorld(): string {
 	return editor.document.getText(editor.selection);
 	
 }
+
 export function showResult(data: string) {
 	const panel = vscode.window.createWebviewPanel( 'myPanel', 'My Panel', vscode.ViewColumn.One, { enableScripts: true } ); panel.webview.html = `<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' vscode-resource: https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js;"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>My Panel</title> </head> <body> <h1>Hello World! ffjdflkgfdjgfjdgkfdjglk</h1> </body> </html>`;
 }
