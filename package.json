@@ -26,7 +26,16 @@
 			{
 				"command": "codebump.quotingCode",
 				"title": "Quote Code"
+			},
+			{
+				"command": "codebump.addLink",
+				"title": "add Link"
+			},
+			{
+				"command": "codebump.addImage",
+				"title": "add Image"
 			}
+			
 		]
 	},
 	"scripts": {

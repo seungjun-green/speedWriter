@@ -15,9 +15,7 @@ export function modifyText(type: string) {
 			const end = editor.selection.end.line;
 			let a = position.line;
 			let b = position.character;
-			let c = position;
-			console.log("ZZzzZZZZZZzzzzzzZZZZzzzzzZZZzzzz");
-			console.log(c);
+			let c = editor.selection.start.character;
 
 			if (start !== end) {
 				editor.edit(editBuilder => {
@@ -28,7 +26,7 @@ export function modifyText(type: string) {
 				});
 			} else {
 				editor.edit(editBuilder => {
-					editBuilder.insert(new vscode.Position(a,b), type);
+					editBuilder.insert(new vscode.Position(a,c), type);
 				});
 			}
 				
@@ -55,6 +53,63 @@ export function quoteCode() {
 		}
 }
 
+export function addLink() {
+	const editor = vscode.window.activeTextEditor;
+        if (!editor) {
+            // show error message
+            vscode.window.showErrorMessage('No Text was selected');
+            return;
+        } else {
+			const curr = editor.document.getText(editor.selection);
+			const position = editor.selection.active;
+			const start = editor.selection.start.line;
+			const end = editor.selection.end.line;
+			let a = position.line;
+			let b = position.character;
+			let c = editor.selection.start.character;
+			let d = editor.selection.end.character;
+
+			
+			editor.edit(editBuilder => {
+				editBuilder.insert(new vscode.Position(a,c), "[");
+				editBuilder.insert(new vscode.Position(a,d+1), "](https://pages.github.com/)");
+
+			});
+			
+				
+			
+			
+		}
+}
+
+export function addImage() {
+	const editor = vscode.window.activeTextEditor;
+        if (!editor) {
+            // show error message
+            vscode.window.showErrorMessage('No Text was selected');
+            return;
+        } else {
+			const curr = editor.document.getText(editor.selection);
+			const position = editor.selection.active;
+			const start = editor.selection.start.line;
+			const end = editor.selection.end.line;
+			let a = position.line;
+			let b = position.character;
+			let c = editor.selection.start.character;
+			let d = editor.selection.end.character;
+
+			
+			editor.edit(editBuilder => {
+				editBuilder.insert(new vscode.Position(a,c), "![");
+				editBuilder.insert(new vscode.Position(a,d+1), "](https://myoctocat.com/assets/images/base-octocat.svg)");
+
+			});
+			
+				
+			
+			
+		}
+}
 
 
 export function activate(context: vscode.ExtensionContext) {
@@ -114,6 +169,25 @@ export function activate(context: vscode.ExtensionContext) {
 		quoteCode();
 	});
 
+	let link = vscode.commands.registerCommand('codebump.addLink', () => {
+		vscode.window.showInformationMessage("Added a link ...");
+		addLink();
+	});
+
+	let image = vscode.commands.registerCommand('codebump.addImage', () => {
+		vscode.window.showInformationMessage("Added a Image ...");
+		addImage();
+	});
+
+	let list = vscode.commands.registerCommand('codebump.addList', () => {
+		vscode.window.showInformationMessage("Mkaing it into a list ...");
+		modifyText("-");
+	});
+
+	let task = vscode.commands.registerCommand('codebump.addTask', () => {
+		vscode.window.showInformationMessage("Mkaing it into a list ...");
+		modifyText("-[ ]");
+	});
 
 
 	context.subscriptions.push(disposable);
@@ -129,7 +203,10 @@ export function activate(context: vscode.ExtensionContext) {
 
 	context.subscriptions.push(quoting);
 	context.subscriptions.push(quotingCode);
-
+	context.subscriptions.push(link);
+	context.subscriptions.push(image);
+	context.subscriptions.push(list);
+	context.subscriptions.push(task);
 
 
 
