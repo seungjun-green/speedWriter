@@ -2,8 +2,6 @@
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
 
-
-
 export function modifyText(type: string) {
 	const editor = vscode.window.activeTextEditor;
         if (!editor) {
@@ -13,15 +11,52 @@ export function modifyText(type: string) {
         } else {
 			const curr = editor.document.getText(editor.selection);
 			const position = editor.selection.active;
-			console.log(position);
+			const start = editor.selection.start.line;
+			const end = editor.selection.end.line;
 			let a = position.line;
 			let b = position.character;
-	
-			editor.edit(editBuilder => {
-				editBuilder.insert(new vscode.Position(a,b), type);
-			});
+			let c = position;
+			console.log("ZZzzZZZZZZzzzzzzZZZZzzzzzZZZzzzz");
+			console.log(c);
+
+			if (start !== end) {
+				editor.edit(editBuilder => {
+					for (let i = start; i < end+1; i++) {
+					console.log(i);
+					editBuilder.insert(new vscode.Position(i,0), type);
+				}
+				});
+			} else {
+				editor.edit(editBuilder => {
+					editBuilder.insert(new vscode.Position(a,b), type);
+				});
+			}
+				
+			
+			
 		}
 }
+export function quoteCode() {
+	const editor = vscode.window.activeTextEditor;
+        if (!editor) {
+            // show error message
+            vscode.window.showErrorMessage('No Text was selected');
+            return;
+        } else {
+			const curr = editor.document.getText(editor.selection);
+			const start = editor.selection.start.line;
+			const end = editor.selection.end.line;
+
+			editor.edit(editBuilder => {
+				editBuilder.insert(new vscode.Position(start,0), "```\n");
+				editBuilder.insert(new vscode.Position(end+1,0), "\n```");
+			});
+			
+		}
+}
+
+
+
 export function activate(context: vscode.ExtensionContext) {
 	console.log('Congratulations, your extension "codebump" is now active!');
 	let disposable = vscode.commands.registerCommand('codebump.helloWorld', () => {
@@ -74,6 +109,12 @@ export function activate(context: vscode.ExtensionContext) {
 		modifyText(">");
 	});
 
+	let quotingCode = vscode.commands.registerCommand('codebump.quotingCode', () => {
+		vscode.window.showInformationMessage("Formatted into quoting code text ...");
+		quoteCode();
+	});
+
+
 
 	context.subscriptions.push(disposable);
 	context.subscriptions.push(largestHeading);
@@ -87,7 +128,7 @@ export function activate(context: vscode.ExtensionContext) {
 	context.subscriptions.push(allBoldItalic);
 
 	context.subscriptions.push(quoting);
-	
+	context.subscriptions.push(quotingCode);
 
 
 

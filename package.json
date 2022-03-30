@@ -22,6 +22,10 @@
 			{
 				"command": "codebump.boldText",
 				"title": "Bold"
+			},
+			{
+				"command": "codebump.quotingCode",
+				"title": "Quote Code"
 			}
 		]
 	},
