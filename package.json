@@ -20,8 +20,8 @@
 				"title": "Hello World"
 			},
 			{
-				"command": "codebump.helloWorld2",
-				"title": "Sup"
+				"command": "codebump.boldText",
+				"title": "Bold"
 			}
 		]
 	},
