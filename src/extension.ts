@@ -34,6 +34,49 @@ export function modifyText(type: string) {
 			
 		}
 }
+
+export function modifyText2(type: string) {
+	const editor = vscode.window.activeTextEditor;
+        if (!editor) {
+            // show error message
+            vscode.window.showErrorMessage('No Text was selected');
+            return;
+        } else {
+			const curr = editor.document.getText(editor.selection);
+			const start = editor.selection.start.line;
+			const end = editor.selection.end.line;
+
+			const position = editor.selection.active;
+			let a = position.line;
+			let b = position.character;
+			let c = editor.selection.start.character;
+			let d = editor.selection.end.character;
+			
+
+			// get a text at specific line of selected text ..."
+			
+
+
+			if (start !== end) {
+				editor.edit(editBuilder => {
+					for (let i = start; i < end+1; i++) {
+					console.log(i);
+					let textL = editor.document.lineAt(i).text.length
+					editBuilder.insert(new vscode.Position(i,0), type);
+					editBuilder.insert(new vscode.Position(i, textL), type);
+				}
+				});
+			} else {
+				editor.edit(editBuilder => {
+					editBuilder.insert(new vscode.Position(a,c), type);
+					editBuilder.insert(new vscode.Position(a,d), type);
+				});
+			}
+			
+		}
+}
+
+
 export function quoteCode() {
 	const editor = vscode.window.activeTextEditor;
         if (!editor) {
@@ -136,27 +179,27 @@ export function activate(context: vscode.ExtensionContext) {
 
 	let boldText = vscode.commands.registerCommand('codebump.boldText', () => {
 		vscode.window.showInformationMessage("Formatted into Bold text ...");
-		modifyText("**");
+		modifyText2("**");
 	});
 
 	let italic = vscode.commands.registerCommand('codebump.italic', () => {
 		vscode.window.showInformationMessage("Formatted into italic text ...");
-		modifyText("* *");
+		modifyText2("* *");
 	});
 
 	let strikethrough = vscode.commands.registerCommand('codebump.strikethrough', () => {
 		vscode.window.showInformationMessage("Formatted into Strikethrough text ...");
-		modifyText("~~ ~~");
+		modifyText2("~~ ~~");
 	});
 
 	let boldItalic = vscode.commands.registerCommand('codebump.boldItalic', () => {
 		vscode.window.showInformationMessage("Formatted into Bold and nested italic text ...");
-		modifyText("** **");
+		modifyText2("** **");
 	});
 
 	let allBoldItalic = vscode.commands.registerCommand('codebump.allBoldItalic', () => {
 		vscode.window.showInformationMessage("Formatted into All bold and italic text ...");
-		modifyText("*** ***");
+		modifyText2("*** ***");
 	});
 
 
