@@ -1,7 +1,7 @@
 # Speed Writer README
 
 Speed Writer helps you working on GitHub README page easier by allowing you to style text in a single command. 
-## how to Install and Use its
+## How to install and use it
 
 1. clone this repository
     ```
@@ -48,7 +48,7 @@ This extension contributes the following settings:
 
 ## Known Issues
 
-There are no know issuees yet. If you find one, please submit a issue. :)
+There are no know issuees yet. If you find one, please submit an issue. :)
 ## Release Notes
 ### 1.0.0
 
