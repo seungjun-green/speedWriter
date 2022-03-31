@@ -20,7 +20,7 @@ Here's are some example features of the Speed Writer.
 > Select the text you want to style, then hit the coressponding command. For example if you want to make the selcted text into BOLd, hit "Speed - Bold" command
 
 
-demo video: https://youtu.be/mN3cZf0iG2g
+**Demo Video**: https://youtu.be/mN3cZf0iG2g
 ## Features
 
 **Style selected text into**
