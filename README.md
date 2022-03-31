@@ -1,18 +1,27 @@
-# codebump README
+# Speed Writer README
 
-This is the README for your extension "codebump". After writing up a brief description, we recommend including the following sections.
-
+Speed Writer helps you working on GitHub README page easier by allowing you to style text in a single command. 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+Here's are some example features of the Speed Writer.
 
-For example if there is an image subfolder under your extension project workspace:
+
+Bold
+> Select the text you want to make it bold, then hit the command "Speed - bold". Then it's done. Now the selected text will be shown Bold in GitHUb README page.
+
+
+
+List
+
+
+
+Adding Hyperlink
+
+
 
 \!\[feature X\]\(images/feature-x.png\)
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
-
-## Requirements
+## how to Install and Use its
 
 If you have any requirements or dependencies, add a section describing those and how to install and configure them.
 
@@ -37,15 +46,7 @@ Users appreciate release notes as you update your extension.
 
 ### 1.0.0
 
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+Initial release of Speed Writer
 
 -----------------------------------------------------------------------------------------------------------
 ## Following extension guidelines
