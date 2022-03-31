@@ -28,9 +28,7 @@ export function modifyText(type: string) {
 				editor.edit(editBuilder => {
 					editBuilder.insert(new vscode.Position(a,c), type);
 				});
-			}
-				
-			
+			}			
 			
 		}
 }
@@ -156,10 +154,10 @@ export function addImage() {
 
 
 export function activate(context: vscode.ExtensionContext) {
-	console.log('Congratulations, your extension "codebump" is now active!');
+	console.log('Congratulations, your extension "Speed Writer" is now active!');
 
 	let disposable = vscode.commands.registerCommand('codebump.helloWorld', () => {
-		vscode.window.showInformationMessage("Welcome to CodeBump.");	
+		vscode.window.showInformationMessage("Welcome to Speed Writer.");	
 	});
 
 	let largestHeading = vscode.commands.registerCommand('codebump.largestHeading', () => {
