@@ -1,29 +1,42 @@
 # Speed Writer README
 
 Speed Writer helps you working on GitHub README page easier by allowing you to style text in a single command. 
-## Features
 
-Here's are some example features of the Speed Writer.
-
-
-Bold
-> Select the text you want to make it bold, then hit the command "Speed - bold". Then it's done. Now the selected text will be shown Bold in GitHUb README page.
-
-
-
-List
-
-
-
-Adding Hyperlink
-
-
-
-\!\[feature X\]\(images/feature-x.png\)
 
 ## how to Install and Use its
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+1. clone this repository
+
+git clone https://github.com/
+
+2. open you vscode, and openthe cloned repository
+
+3. Hit F% to open a test window and
+
+4. run the Speed -  Set Up, to strat running this extension
+
+5. now you can use Speed Writer.
+
+Here's are some example features of the Speed Writer.
+> Select the text you want to style, then hit the coressponding command. For example if you want to make the selcted text into BOLd, hit "Speed - Bold" command
+## Features
+
+**style text into
+
+- largest heading
+- second largest heading
+- small largest heading
+- bold
+- italic
+- Bold and nested italic
+- All bold and italic
+- quote text
+- quote code
+- hyperlink
+- image link
+- list
+- task
+
 
 ## Extension Settings
 
