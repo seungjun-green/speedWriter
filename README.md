@@ -35,17 +35,6 @@ Here's are some example features of the Speed Writer.
 - image link
 - list
 - task
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
-
 ## Known Issues
 
 There are no know issuees yet. If you find one, please submit an issue. :)
