@@ -114,6 +114,7 @@ export function addImage() {
 
 export function activate(context: vscode.ExtensionContext) {
 	console.log('Congratulations, your extension "codebump" is now active!');
+
 	let disposable = vscode.commands.registerCommand('codebump.helloWorld', () => {
 		vscode.window.showInformationMessage("Welcome to CodeBump.");	
 	});

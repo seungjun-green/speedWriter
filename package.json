@@ -17,24 +17,61 @@
 		"commands": [
 			{
 				"command": "codebump.helloWorld",
-				"title": "Hello World"
+				"title": "Speed - Set Up"
+			},
+			{
+				"command": "codebump.largestHeading",
+				"title": "Speed - Largest Heading"
+			},
+			{
+				"command": "codebump.secondHeading",
+				"title": "Speed - Second Largest Heading"
+			},
+			{
+				"command": "codebump.smallHeading",
+				"title": "Speed - Smallest Heading"
 			},
 			{
 				"command": "codebump.boldText",
-				"title": "Bold"
+				"title": "Speed - Bold"
+			},
+			{
+				"command": "codebump.italic",
+				"title": "Speed - Italic"
+			},
+			{
+				"command": "codebump.strikethrough",
+				"title": "Speed - Strikethrough"
+			},
+			{
+				"command": "codebump.boldItalic",
+				"title": "Speed - Bold Italic"
+			},
+			{
+				"command": "codebump.quoting",
+				"title": "Speed - Quote Text"
 			},
 			{
 				"command": "codebump.quotingCode",
-				"title": "Quote Code"
+				"title": "Speed - Quote Code"
 			},
 			{
 				"command": "codebump.addLink",
-				"title": "add Link"
+				"title": "Speed - add Link"
 			},
 			{
 				"command": "codebump.addImage",
-				"title": "add Image"
+				"title": "Speed - add Image"
+			},
+			{
+				"command": "codebump.addList",
+				"title": "Speed - List"
+			},
+			{
+				"command": "codebump.addTask",
+				"title": "Speed - Task"
 			}
+
 			
 		]
 	},
