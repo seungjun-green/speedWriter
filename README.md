@@ -21,7 +21,7 @@ Here's are some example features of the Speed Writer.
 > Select the text you want to style, then hit the coressponding command. For example if you want to make the selcted text into BOLd, hit "Speed - Bold" command
 ## Features
 
-**style text into**
+**Style text into**
 
 - largest heading
 - second largest heading
@@ -51,12 +51,8 @@ This extension contributes the following settings:
 
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
+There are no know issuees yet. If you find one, please submit a issue. :)
 ## Release Notes
-
-Users appreciate release notes as you update your extension.
-
 ### 1.0.0
 
 Initial release of Speed Writer
