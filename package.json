@@ -1,7 +1,7 @@
 {
-  "name": "codebump",
-	"displayName": "CodeBump",
-	"description": "code auto completion",
+	"name": "readmespeedwriter",
+	"displayName": "README Speed Writer",
+	"description": "README Speed Writer makes you working on Github READEME page much easier.",
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.65.0"
